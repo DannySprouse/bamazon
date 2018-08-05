@@ -18,7 +18,7 @@ var connection = mysql.createConnection( {
 var displayProducts = function() {
     connection.query('SELECT * FROM products', function(err, res) {
         var table = new Table ({
-            head: ['Item Id'.blue.bgYellow, 'Item Name'.blue.bgYellow, 'Department'.blue.bgYellow, 'Current Price'.blue.bgYellow, 'Quantity in Stock'.blue.bgYellow]
+            head: ['Item Id'.blue.bgYellow, 'Product Name'.blue.bgYellow, 'Department'.blue.bgYellow, 'Current Price'.blue.bgYellow, 'Quantity in Stock'.blue.bgYellow]
         });
 
         console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -58,14 +58,14 @@ var displayProducts = function() {
         }]).then(function(answer) {
 
             // This responds to the user input by checking inventory to respond to the order request
-            var chosenId = answer.item_id - 1
-            var chosenProduct = res[chosenId]
-            var chosenQuantity = answer.stock_quantity
+            var selectedItemId = answer.item_id - 1
+            var selectedProduct = res[selectedItemId]
+            var selectedQuantity = answer.stock_quantity
 
-            if (chosenQuantity < res[chosenId].stock_quantity) {
-                console.log("Your total is: " + res[chosenId].price.toFixed(2) * chosenQuantity);
+            if (selectedQuantity < res[selectedItemId].stock_quantity) {
+                console.log("Your total is: " + res[selectedItemId].price.toFixed(2) * selectedQuantity);
                 connection.query("UPDATE products SET ? WHERE ? item_id = ?", [{
-                    stock_quantity: res[chosenId].stock_quantity - chosenQuantity
+                    stock_quantity: res[selectedItemId].stock_quantity - selectedQuantity
                 }, {
                    // Something missing here I can't figure out, it is not calculating the update products correctly
                 }], 
@@ -74,11 +74,11 @@ var displayProducts = function() {
                 });
 
             } else {
-                console.log("There is not enough inventory to complete your order.");
+                console.log("The quantity and item you selected are not available at this time.");
             }
         })
     })
 }
 // Table loads and asks questions, but once order is complete cannot get table to refresh with reduced inventory
 
-displayProducts();
+displayProducts(); // Not sure if this should be up inside the if/else or down here, not working either way
