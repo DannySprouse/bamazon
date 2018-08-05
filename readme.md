@@ -6,7 +6,20 @@ After selecting item and quantity, it returns the total price.
 
 Then it freezes there and will not display the table again with the updated inventory.  Clearly I'm doing something wrong in customer.js file.
 
-First Screen:  ![Screen shot after entering node customer.js](/images/firstscreen.jpg?raw=true "First Screen")
+First Screen:  ![Screen shot after entering node customer.js](../assets/images/firstscreen.jpg "First Screen")
 
-Second Screen: ![Screen shot after entering item ID and qty](assets/images/secondscreen.jpg?raw=true "Second Screen")
+Second Screen: ![Screen shot after entering item ID and qty](/assets/images/secondscreen.jpg "Second Screen")
 
+First Screen:  ![Screen shot after entering node customer.js](assets/images/firstscreen.jpg "First Screen")
+
+Second Screen: ![Screen shot after entering item ID and qty](../images/secondscreen.jpg "Second Screen")
+
+First Screen:  ![Screen shot after entering node customer.js](/images/firstscreen.jpg "First Screen")
+
+Second Screen: ![Screen shot after entering item ID and qty](images/secondscreen.jpg "Second Screen")
+
+First Screen:  ![Screen shot after entering node customer.js](../firstscreen.jpg "First Screen")
+
+Second Screen: ![Screen shot after entering item ID and qty](/secondscreen.jpg "Second Screen")
+
+First Screen:  ![Screen shot after entering node customer.js](firstscreen.jpg "First Screen")
