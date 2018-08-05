@@ -1,25 +1,9 @@
 This app does not work.
 
-It loads the table and pulls the items from the database as seen in First Screen.
+It loads the table and pulls the items from the database as seen in First Screen. (See firstscreen.jpg)
 
-After selecting item and quantity, it returns the total price.
+After selecting item and quantity, it returns the total price.  (See secondscreen.jpg)
 
 Then it freezes there and will not display the table again with the updated inventory.  Clearly I'm doing something wrong in customer.js file.
 
-First Screen:  ![Screen shot after entering node customer.js](../assets/images/firstscreen.jpg "First Screen")
-
-Second Screen: ![Screen shot after entering item ID and qty](/assets/images/secondscreen.jpg "Second Screen")
-
-First Screen:  ![Screen shot after entering node customer.js](assets/images/firstscreen.jpg "First Screen")
-
-Second Screen: ![Screen shot after entering item ID and qty](../images/secondscreen.jpg "Second Screen")
-
-First Screen:  ![Screen shot after entering node customer.js](/images/firstscreen.jpg "First Screen")
-
-Second Screen: ![Screen shot after entering item ID and qty](images/secondscreen.jpg "Second Screen")
-
-First Screen:  ![Screen shot after entering node customer.js](../firstscreen.jpg "First Screen")
-
-Second Screen: ![Screen shot after entering item ID and qty](/secondscreen.jpg "Second Screen")
-
-First Screen:  ![Screen shot after entering node customer.js](firstscreen.jpg "First Screen")
+This is not added to my final portfolio for obvious reasons!
